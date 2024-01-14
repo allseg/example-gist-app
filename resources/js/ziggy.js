@@ -1,0 +1,7 @@
+const Ziggy = {"url":"http:\/\/localhost","port":null,"defaults":{},"routes":{"sanctum.csrf-cookie":{"uri":"sanctum\/csrf-cookie","methods":["GET","HEAD"]},"ignition.healthCheck":{"uri":"_ignition\/health-check","methods":["GET","HEAD"]},"ignition.executeSolution":{"uri":"_ignition\/execute-solution","methods":["POST"]},"ignition.updateConfig":{"uri":"_ignition\/update-config","methods":["POST"]},"welcome":{"uri":"\/","methods":["GET","HEAD"]},"dashboard":{"uri":"dashboard","methods":["GET","HEAD"]},"gists.index":{"uri":"gists","methods":["GET","HEAD"]},"gists.create":{"uri":"gists\/create","methods":["GET","HEAD"]},"gists.show":{"uri":"gists\/show\/{gistId}","methods":["GET","HEAD"],"parameters":["gistId"]},"gists.edit":{"uri":"gists\/edit\/{gistId}","methods":["GET","HEAD"],"parameters":["gistId"]},"gists.store":{"uri":"gists\/store","methods":["POST"]},"gists.update":{"uri":"gists\/update\/{gistId}","methods":["PATCH"],"parameters":["gistId"]},"gists.delete":{"uri":"gists\/delete\/{gistId}","methods":["DELETE"],"parameters":["gistId"]},"profile.edit":{"uri":"profile","methods":["GET","HEAD"]},"profile.update":{"uri":"profile","methods":["PATCH"]},"profile.destroy":{"uri":"profile","methods":["DELETE"]},"github.redirect":{"uri":"auth\/redirect","methods":["GET","HEAD"]},"github.callback":{"uri":"auth\/callback","methods":["GET","HEAD"]},"logout":{"uri":"logout","methods":["POST"]}}};
+
+if (typeof window !== 'undefined' && typeof window.Ziggy !== 'undefined') {
+    Object.assign(Ziggy.routes, window.Ziggy.routes);
+}
+
+export { Ziggy };
